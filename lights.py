@@ -1,7 +1,9 @@
 import web
 import serial
 
-ser = serial.Serial('/dev/ttyACM0', 9600)
+#ser = serial.Serial('/dev/ttyACM0', 9600)
+
+render = web.template.render('templates/')
 
 urls = (
     '/', 'index'
@@ -9,7 +11,7 @@ urls = (
 
 class index:
     def GET(self):
-        return "Hello, world!"
+        return render.index()
 
 if __name__ == "__main__":
     app = web.application(urls, globals())
