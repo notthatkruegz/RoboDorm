@@ -1,3 +1,3 @@
 # RoboDorm
-Automated __dorm__ room
+Automated ___dorm___ room
 + Swaggy things like *internet-lights*, *RFID doors*, etc
