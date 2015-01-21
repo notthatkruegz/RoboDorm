@@ -1,12 +1,14 @@
-// arduino.ino
-
 String command = "";
 char character;
 int floorLampPin = 13;
+int deskLampPin = 12;
+int bedLampPin = 11;
 
 void setup() {
 	Serial.begin(9600);
 	pinMode(floorLampPin, OUTPUT);
+        pinMode(deskLampPin, OUTPUT);
+        pinMode(bedLampPin, OUTPUT);
 }
 
 void getCommand() {
@@ -29,6 +31,12 @@ void loop() {
 		digitalWrite(floorLampPin, HIGH);
         else if (command == "floorLampOff")
                 digitalWrite(floorLampPin, LOW);
-   
+        else if (command == "deskLampOn")
+                digitalWrite(deskLampPin, HIGH);
+        else if (command == "deskLampOff")
+                digitalWrite(deskLampPin, LOW);
+        else if (command == "bedLampOn")
+                digitalWrite(bedLampPin, HIGH);
+        else if (command == "bedLampOff")
+                digitalWrite(bedLampPin, LOW);
 }
-asdf
