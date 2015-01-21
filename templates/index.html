@@ -11,7 +11,7 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 			margin-left: auto;
 			margin-right: auto;
 			width: 100%;
-			height: 30%;
+			height: 22%;
 		}
 		#floorLamp {
 			$if floorLamp:
@@ -31,6 +31,9 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 			$else:
 				background-color: #880000;
 		}
+		#reset {
+		        background-color: #111111;
+	        }
 		a:link, a:visited, a:active, a:hover {
 			display: block;
 			font-size: 100px;
@@ -46,5 +49,6 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 	<a href="./?c=floorLamp"><div class="button" id="floorLamp"><p>Floor Lamp</p></div></a><br>
 	<a href="./?c=deskLamp"><div class="button" id="deskLamp">Desk Lamp</div></a><br>
 	<a href="./?c=bedLamp"><div class="button" id="bedLamp">Bed Lamp</div></a><br>
+	<a href="./"><div class="button" id="reset">Reset</div></a><br>
 </body>
 </html>
