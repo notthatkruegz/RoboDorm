@@ -4,10 +4,6 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 <head>
 	<link rel="icon" type="image/png" href="/static/favicon.ico">
 	<style type="text/css">
-		:root {
-			--off-color: #880000;
-			--on-color: #008800;
-		}
 		body {
 			background-color: black;
 		}
@@ -19,21 +15,21 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 		}
 		#floorLamp {
 			$if floorLamp:
-				background-color: var(--on-color);
+				background-color: #00ff00;
 			$else:
-				background-color: var(--off-color);
+				background-color: #ff0000;
 		}
 		#deskLamp {
 			$if deskLamp:
-				background-color: var(--on-color);
+				background-color: #00ff00;
 			$else:
-				background-color: var(--off-color);
+				background-color: #ff0000;
 		}
 		#bedLamp {
 			$if bedLamp:
-				background-color: var(--on-color);
+				background-color: #00ff00;
 			$else:
-				background-color: var(--off-color);
+				background-color: #ff0000;
 		}
 		a:link, a:visited, a:active, a:hover {
 			display: block;
@@ -47,7 +43,7 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 	</style>
 </head>
 <body>
-	<a href="./?c=floorLamp"><div class="button" id="floorLamp">Floor Lamp</div></a><br>
+	<a href="./?c=floorLamp"><div class="button" id="floorLamp"><p>Floor Lamp</p></div></a><br>
 	<a href="./?c=deskLamp"><div class="button" id="deskLamp">Desk Lamp</div></a><br>
 	<a href="./?c=bedLamp"><div class="button" id="bedLamp">Bed Lamp</div></a><br>
 </body>
