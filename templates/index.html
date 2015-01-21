@@ -1,8 +1,47 @@
+$def with (c, floorLamp, deskLamp, bedLamp)
+
 <html>
 <head>
 	<link rel="icon" type="image/png" href="/static/favicon.ico">
+	<style type="text/css">
+		.button {
+			margin-left: auto;
+			margin-right: auto;
+			width: 500px;
+			height: 100px;
+			text-align: center;
+		}
+		#floorLamp {
+			$if floorLamp:
+				background-color: green;
+			$else:
+				background-color: red;
+		}
+		#deskLamp {
+			$if deskLamp:
+				background-color: green;
+			$else:
+				background-color: red;
+		}
+		#bedLamp {
+			$if bedLamp:
+				background-color: green;
+			$else:
+				background-color: red;
+		}
+		a:link, a:visited, a:active, a:hover {
+			display: block;
+			font-size: 80px;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			color: white;
+		}
+	</style>
 </head>
 <body>
-Hello, world!
+	<a href="./?c=floorLamp"><div class="button" id="floorLamp">Floor Lamp</div></a>
+	<a href="./?c=deskLamp"><div class="button" id="deskLamp">Desk Lamp</div></a>
+	<a href="./?c=bedLamp"><div class="button" id="bedLamp">Bed Lamp</div></a>
 </body>
 </html>
