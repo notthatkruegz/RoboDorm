@@ -34,10 +34,10 @@ class index:
 			ser.write("deskLampOn")
 			deskLamp = True;
 		elif data.c == "bedLamp" and bedLamp:
-			ser.write("bedLampOn")
+			ser.write("bedLampOff")
 			bedLamp = False;
 		elif data.c == "bedLamp" and not bedLamp:
-			ser.write("bedLampOff")
+			ser.write("bedLampOn")
 			bedLamp = True;
 
 		return render.index(data.c, floorLamp, deskLamp, bedLamp)
