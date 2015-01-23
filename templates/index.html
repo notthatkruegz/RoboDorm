@@ -1,4 +1,4 @@
-$def with (c, floorLamp, deskLamp, bedLamp)
+$def with (c, floorLamp, deskLampZ, deskLampB, bedLamp)
 
 <html>
 <head>
@@ -11,7 +11,7 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 			margin-left: auto;
 			margin-right: auto;
 			width: 100%;
-			height: 22%;
+			height: 18%;
 		}
 		#floorLamp {
 			$if floorLamp:
@@ -19,8 +19,14 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 			$else:
 				background-color: #880000;
 		}
-		#deskLamp {
-			$if deskLamp:
+		#deskLampZ {
+			$if deskLampZ:
+				background-color: #008800;
+			$else:
+				background-color: #880000;
+		}
+		#deskLampB {
+			$if deskLampB:
 				background-color: #008800;
 			$else:
 				background-color: #880000;
@@ -31,7 +37,7 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 			$else:
 				background-color: #880000;
 		}
-		#reset {
+		#refresh {
 		        background-color: #111111;
 	        }
 		a:link, a:visited, a:active, a:hover {
@@ -47,8 +53,9 @@ $def with (c, floorLamp, deskLamp, bedLamp)
 </head>
 <body>
 	<a href="./?c=floorLamp"><div class="button" id="floorLamp"><p>Floor Lamp</p></div></a><br>
-	<a href="./?c=deskLamp"><div class="button" id="deskLamp">Desk Lamp</div></a><br>
+	<a href="./?c=deskLampZ"><div class="button" id="deskLampZ">Zach Desk Lamp</div></a><br>
+	<a href="./?c=deskLampB"><div class="button" id="deskLampB">Bridger Desk Lamp</div></a><br>
 	<a href="./?c=bedLamp"><div class="button" id="bedLamp">Bed Lamp</div></a><br>
-	<a href="./"><div class="button" id="reset">Reset</div></a><br>
+	<a href="./"><div class="button" id="refresh">Refresh</div></a><br>
 </body>
 </html>
