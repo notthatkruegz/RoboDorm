@@ -1,8 +1,6 @@
-String command = "";
-char character;
 int floorLampPin = 13;
 int deskLampZPin = 12;
-int deskLampZPin = 14;
+int deskLampZPin = 10;
 int bedLampPin = 11;
 
 void setup() {
@@ -12,21 +10,23 @@ void setup() {
         pinMode(deskLampBPin, OUTPUT);
         pinMode(bedLampPin, OUTPUT);
 }
-//Perhaps consider changing structure of this in the future, so as to not deal with globals
-//Instead return the command String (unknown how this works with Aruduino)
-void getCommand() {
-        command = "";
+
+String getCommand() {
+        String command = "";
+        char character;
+
 	while (Serial.available()) {
                 character = Serial.read();
                 command.concat(character);
                 delay(10);
         }
-        if (command != "")
-                Serial.println(command);
+
+        return command;
 }
 
 void loop() {
-	getCommand();
+	String command = getCommand();
+        
 	//Floor Lamp
 	if (command == "floorLampOn")
 		digitalWrite(floorLampPin, HIGH);
