@@ -32,9 +32,9 @@ class index:
 			deskLampZ = True;
 		# Bridger Desk Lamp
 		elif data.c == "deskLampB" and deskLampB:
-		        ser.write("deskLampBOff")
-		        deskLampB = False
-	        elif data.c == "deskLampB" and not deskLampB:
+		    ser.write("deskLampBOff")
+		    deskLampB = False
+	    elif data.c == "deskLampB" and not deskLampB:
 			ser.write("deskLampBOn")
 			deskLampB = True;
 		# Zach Bed Lamp
