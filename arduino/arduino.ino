@@ -1,6 +1,6 @@
 int floorLampPin = 13;
 int deskLampZPin = 12;
-int deskLampZPin = 10;
+int deskLampBPin = 10;
 int bedLampPin = 11;
 
 void setup() {
