@@ -15,35 +15,37 @@ class index:
 		global deskLampZ
 		global deskLampB
 		global bedLamp
+		
 		data = web.input(c = None)
+		
 		# Floor Lamp
 		if data.c == "floorLamp" and floorLamp:
 			ser.write("floorLampOff")
-			floorLamp = False;
+			floorLamp = False
 		elif data.c == "floorLamp" and not floorLamp:
 			ser.write("floorLampOn")
-			floorLamp = True;
+			floorLamp = True
 		# Zach Desk Lamp
 		elif data.c == "deskLampZ" and deskLampZ:
 			ser.write("deskLampZOff")
-			deskLampZ = False;
+			deskLampZ = False
 		elif data.c == "deskLampZ" and not deskLampZ:
 			ser.write("deskLampZOn")
-			deskLampZ = True;
+			deskLampZ = True
 		# Bridger Desk Lamp
 		elif data.c == "deskLampB" and deskLampB:
 		    ser.write("deskLampBOff")
 		    deskLampB = False
 	    elif data.c == "deskLampB" and not deskLampB:
 			ser.write("deskLampBOn")
-			deskLampB = True;
+			deskLampB = True
 		# Zach Bed Lamp
 		elif data.c == "bedLamp" and bedLamp:
 			ser.write("bedLampOff")
-			bedLamp = False;
+			bedLamp = False
 		elif data.c == "bedLamp" and not bedLamp:
 			ser.write("bedLampOn")
-			bedLamp = True;
+			bedLamp = True
 		return render.index(data.c, floorLamp, deskLampZ, deskLampB, bedLamp)
 
 if __name__ == "__main__":
