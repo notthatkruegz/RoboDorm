@@ -1,6 +1,6 @@
 import web
 import serial
-
+# adding a comment here
 ser = serial.Serial('/dev/ttyACM0', 9600)
 render = web.template.render('templates/')
 urls = ('/', 'index')
